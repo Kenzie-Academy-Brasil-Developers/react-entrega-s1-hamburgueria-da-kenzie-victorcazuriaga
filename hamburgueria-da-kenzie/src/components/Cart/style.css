@@ -1,0 +1,7 @@
+.containerCart{
+    width:365px;
+    height: 530px;
+    display: flex;
+    flex-flow: column;
+    padding: 10px 0 ;
+}

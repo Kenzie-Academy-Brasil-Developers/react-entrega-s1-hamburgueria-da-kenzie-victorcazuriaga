@@ -1,23 +1,19 @@
+import CardTotal from '../CartTotal'
 import ProductCart from '../ProductCart'
+import "./style.css"
 export default function Cart({ currentSale, handleRemoveCart, handleRemoveAllCart }) {
     return (
-        <>
+        <div className='containerCart'>
             {
                 currentSale.map((product) =>
                     <ProductCart key={product.cartId} id={product.cartId} name={product.name} category={product.category} price={product.price}
-                        handleRemoveCart={handleRemoveCart}
+                        handleRemoveCart={handleRemoveCart} img={product.img}
                     />
 
                 )
             }
-            <h1>
-                {currentSale.reduce((acc, cur) =>
-                    acc + cur.price, 0
-                )}
-            </h1>
-
-            <button onClick={handleRemoveAllCart}> Remover Todos</button>
-        </>
+            <CardTotal currentSale={currentSale} handleRemoveAllCart={handleRemoveAllCart} />
+        </div>
     )
 
 

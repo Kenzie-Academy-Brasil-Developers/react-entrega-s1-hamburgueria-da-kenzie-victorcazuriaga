@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import "./style.css"
 
 export default function FilterProduct({ setFilteredListProducts, productsList }) {
     const input = useRef();
@@ -10,7 +11,7 @@ export default function FilterProduct({ setFilteredListProducts, productsList })
 
     }
     return (
-        <div>
+        <div className="filterSearch">
             <input ref={input} placeholder="pesquisa" />
             <button onClick={onSearchProduct}>Pesquisar</button>
         </div>

@@ -1,0 +1,18 @@
+.productCart{
+    display: flex;
+    width: 343px;
+    height: 80px;
+
+
+}
+.productCart img {
+    width: 70px;
+    height: 70px;
+}
+.productCart h1{
+font-family: "Inter", sans serif;
+font-weight: 700;
+width: 170px;
+height: 30px;
+color: #333333;
+}
