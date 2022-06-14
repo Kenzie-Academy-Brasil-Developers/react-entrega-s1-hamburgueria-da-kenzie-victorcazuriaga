@@ -1,7 +1,40 @@
-.containerCart{
-    width:365px;
-    height: 530px;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.cartContainer{
     display: flex;
-    flex-flow: column;
-    padding: 10px 0 ;
+    flex-direction: column;
+    box-sizing: border-box;
+
 }
+.containerCart{
+    margin-top: 32px;
+    width:365px;
+    height: 400px;
+    text-align: center;
+    border: solid #F5F5F5 2px;
+    background-color: #F5F5F5;
+    overflow: auto;
+    border-radius: 8px;
+
+}
+.containerCart h1{
+    font-size: 14px;
+}
+
+.containerCart img{
+    width: 70px;
+    height: 70px;
+}
+.headerCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 365px;
+    height: 65px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: #27ae60 ;
+
+}
+

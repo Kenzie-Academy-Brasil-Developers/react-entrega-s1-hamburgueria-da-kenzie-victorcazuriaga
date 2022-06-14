@@ -15,7 +15,6 @@ function App() {
   const productsList = useRef([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [filteredListProducts, setFilteredListProducts] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
   //Request Api
   const getProductList = () => {
     axios({
@@ -45,9 +44,10 @@ function App() {
         <img src={LogoBurgerKenzie} alt="LogoBurguerKenzie" />
         <FilterProduct setFilteredListProducts={setFilteredListProducts} productsList={productsList.current} />
       </header>
-
-      <ProductsList productList={filteredListProducts} handleClick={handleClick} />
-      <Cart currentSale={currentSale} handleRemoveCart={handleRemoveCart} handleRemoveAllCart={handleRemoveAllCart} />
+      <div className='container'>
+        <ProductsList productList={filteredListProducts} handleClick={handleClick} />
+        <Cart currentSale={currentSale} handleRemoveCart={handleRemoveCart} handleRemoveAllCart={handleRemoveAllCart} />
+      </div>
     </>
   );
 }

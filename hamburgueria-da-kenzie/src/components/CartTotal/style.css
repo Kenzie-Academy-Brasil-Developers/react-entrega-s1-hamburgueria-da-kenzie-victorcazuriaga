@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.cartTotal{
+display: flex;
+flex-direction: column;
+border: solid #F5F5F5 2px;
+width: 365px;
+height: 122px;
+margin: 0 auto;
+align-items: center;
+justify-content: center;
+background-color: #F5F5F5;
+border-radius: 5px;
+border-top: #E0E0E0 2px solid;
+
+}
+.cartTotal h1{
+    
+    text-align: end;
+    font-size: 20px;
+    margin: 5px;
+
+}
+.cartTotal button{
+    width: 343px;
+    height: 60px;
+    border-radius: 8px;
+    margin: 0 auto;
+    align-self:center ;
+    background-color:#E0E0E0;
+    font-family: "Nunito",sans-serif;
+    font-weight: 700;
+    border: none;
+    color: #787878;
+}

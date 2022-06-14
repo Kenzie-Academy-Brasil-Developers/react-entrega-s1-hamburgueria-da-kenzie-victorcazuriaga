@@ -1,5 +1,6 @@
 .productCart{
     display: flex;
+    flex-flow: row;
     width: 343px;
     height: 80px;
 
@@ -12,7 +13,11 @@
 .productCart h1{
 font-family: "Inter", sans serif;
 font-weight: 700;
-width: 170px;
+width: 160px;
 height: 30px;
 color: #333333;
+}
+.productCart button{
+    border: none;
+    background-color: white;
 }
