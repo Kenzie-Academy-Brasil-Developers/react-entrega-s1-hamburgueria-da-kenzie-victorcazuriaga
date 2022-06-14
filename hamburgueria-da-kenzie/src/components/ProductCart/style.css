@@ -1,6 +1,7 @@
 .productCart{
     display: flex;
     flex-flow: row;
+    justify-content: center;
     width: 343px;
     height: 80px;
 
@@ -19,5 +20,5 @@ color: #333333;
 }
 .productCart button{
     border: none;
-    background-color: white;
+    background-color: #F5F5F5;
 }

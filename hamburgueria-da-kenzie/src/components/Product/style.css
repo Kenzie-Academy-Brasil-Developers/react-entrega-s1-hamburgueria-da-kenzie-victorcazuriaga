@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 .productCard{
-    display: flex;
+   
     text-align: center;
-    margin: 32px 20px 20px 115px;
+    margin: 10px 10px 10px 45px;
     padding: 5px ;
-    width: 20vw;
-    height: 26vw;
     flex-wrap: wrap;
     border: solid  #F5F5F5 2px;
     box-sizing: border-box;
+    width: 300px;
+    height: 346px;
 
 }
 .productImg{ 
@@ -20,7 +20,6 @@
     width: 177px;
 }
 .productInfo{
-    display: flex;
     text-align: left;
     flex-direction: column;
     background-color: #ffff;

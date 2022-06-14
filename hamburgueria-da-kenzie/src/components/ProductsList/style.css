@@ -1,5 +1,6 @@
 .productsList{
 display: flex;
+flex-flow: row;
 flex-wrap: wrap;
 width: 100%;
 height: 100%;
