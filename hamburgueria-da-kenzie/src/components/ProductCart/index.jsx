@@ -1,6 +1,5 @@
 import "./style.css"
-export default function ProductCart({ id, name, price, category, handleRemoveCart, img, cartItem, idapi }) {
-
+export default function ProductCart({ id, name, price, category, handleRemoveCart, img, }) {
     return (
 
         < div className="productCart" >
@@ -8,7 +7,7 @@ export default function ProductCart({ id, name, price, category, handleRemoveCar
             <h1>{name}</h1>
             <p> {category}</p>
             <span>R${price}</span>
-            <button onClick={() => handleRemoveCart(id)}> Remover </button>
+            <button onClick={() => { handleRemoveCart(id) }}> Remover </button>
 
         </div >
 

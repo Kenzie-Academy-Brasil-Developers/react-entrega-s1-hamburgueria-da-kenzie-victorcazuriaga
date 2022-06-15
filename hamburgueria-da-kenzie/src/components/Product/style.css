@@ -9,8 +9,7 @@
     box-sizing: border-box;
     width: 300px;
     height: 346px;
-    border: #333333 solid 2px;
-    
+    box-sizing: border-box;
 }
 .productImg{ 
     background-color: #F5F5F5;
@@ -36,7 +35,7 @@
 font-family: "Inter";
 font-weight: 700;
 font-size: 18px;
-padding: 10px;
+padding: 0px;
 color: #333333;
 }
 .productInfo span {

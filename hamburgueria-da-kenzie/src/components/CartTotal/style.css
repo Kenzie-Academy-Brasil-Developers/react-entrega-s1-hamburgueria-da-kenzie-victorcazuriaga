@@ -32,9 +32,9 @@ border-top: #E0E0E0 2px solid;
     color: #787878;
 }
 .cartTotal span{
-text-align: justify;
+    font-size: 18px;
+ margin: 0 0 10px;   
 }
 @media only screen and (max-width: 800px){
-    .cartTotal{
-    }
+  
 }
