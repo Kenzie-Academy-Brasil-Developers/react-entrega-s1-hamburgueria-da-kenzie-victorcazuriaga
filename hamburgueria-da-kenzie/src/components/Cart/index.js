@@ -1,7 +1,7 @@
 import CardTotal from '../CartTotal'
 import ProductCart from '../ProductCart'
 import "./style.css"
-export default function Cart({ currentSale, handleRemoveCart, handleRemoveAllCart }) {
+export default function Cart({ currentSale, handleRemoveCart, handleRemoveAllCart, cartItem }) {
 
     return (
         <div className='cartContainer'>
@@ -11,8 +11,8 @@ export default function Cart({ currentSale, handleRemoveCart, handleRemoveAllCar
                 </div>
                 {currentSale.length === 0 ? <div> <h1> Sua sacola está vazia </h1> <span> Adicione Itens </span> </div> :
                     currentSale.map((product) =>
-                        <ProductCart key={product.cartId} id={product.cartId} name={product.name} category={product.category} price={product.price}
-                            handleRemoveCart={handleRemoveCart} img={product.img}
+                        <ProductCart key={product.cartId} id={product.cartId} idapi={product.id} name={product.name} category={product.category} price={product.price}
+                            handleRemoveCart={handleRemoveCart} img={product.img} cartItem={cartItem}
                         />
 
                     )

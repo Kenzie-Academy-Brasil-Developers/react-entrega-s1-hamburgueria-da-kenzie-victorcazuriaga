@@ -4,10 +4,9 @@
 //     price: number;
 //     category: string;
 // }
-import { useState } from "react";
 import "./style.css"
-export default function Product({ name, price, category, img, id, handleClick }) {
-
+export default function Product({ name, price, category, img, id, handleClick, setCartItem }) {
+    const dbCart = (id) => setCartItem(id);
     return (
         <>
             <div className="productCard">
@@ -18,7 +17,7 @@ export default function Product({ name, price, category, img, id, handleClick })
                     <h1> {name} </h1>
                     <p> {category}</p>
                     <span>{` R$ ${price}`} </span>
-                    <button onClick={() => handleClick(id)}> Adicionar </button>
+                    <button onClick={() => { handleClick(id); dbCart(id) }}> Adicionar </button>
                 </div>
             </div>
         </>

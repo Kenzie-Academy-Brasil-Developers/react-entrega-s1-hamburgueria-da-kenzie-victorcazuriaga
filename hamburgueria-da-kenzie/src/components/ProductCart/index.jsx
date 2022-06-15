@@ -1,9 +1,8 @@
 import "./style.css"
-import { useState } from "react";
-export default function ProductCart({ id, name, price, category, handleRemoveCart, img }) {
-
+export default function ProductCart({ id, name, price, category, handleRemoveCart, img, cartItem, idapi }) {
 
     return (
+
         < div className="productCart" >
             <img src={img} alt={name} />
             <h1>{name}</h1>
@@ -12,6 +11,7 @@ export default function ProductCart({ id, name, price, category, handleRemoveCar
             <button onClick={() => handleRemoveCart(id)}> Remover </button>
 
         </div >
+
 
 
     )

@@ -15,6 +15,8 @@ function App() {
   const productsList = useRef([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [filteredListProducts, setFilteredListProducts] = useState([]);
+  const [cartItem, setCartItem] = useState("");
+
   //Request Api
   const getProductList = () => {
     axios({
@@ -30,10 +32,11 @@ function App() {
   useEffect(getProductList, [])
 
   //Funções Aplicação
+
   const handleClick = (productId) => {
     const selectedProduct = filteredListProducts.find(({ id }) => id === productId)
     const cartId = uuidv4();
-    setCurrentSale(([...prevState]) => [...prevState, { ...selectedProduct, cartId: cartId }])
+    cartItem !== productId && setCurrentSale(([...prevState]) => [...prevState, { ...selectedProduct, cartId: cartId }])
   }
   const handleRemoveCart = (currentCartId) => setCurrentSale((prevState) => prevState.filter(({ cartId }) => cartId !== currentCartId));
   const handleRemoveAllCart = () => setCurrentSale([]);
@@ -45,8 +48,8 @@ function App() {
         <FilterProduct setFilteredListProducts={setFilteredListProducts} productsList={productsList.current} />
       </header>
       <div className='container'>
-        <ProductsList productList={filteredListProducts} handleClick={handleClick} />
-        <Cart currentSale={currentSale} handleRemoveCart={handleRemoveCart} handleRemoveAllCart={handleRemoveAllCart} />
+        <ProductsList productList={filteredListProducts} handleClick={handleClick} setCartItem={setCartItem} cartItem={cartItem} />
+        <Cart currentSale={currentSale} handleRemoveCart={handleRemoveCart} handleRemoveAllCart={handleRemoveAllCart} cartItem={cartItem} />
       </div>
     </>
   );

@@ -38,4 +38,8 @@
     background-color: #27ae60 ;
 
 }
-
+@media only screen and (min-width: 750px) {
+   .cartContainer{ 
+       flex-direction: column;
+    } 
+}

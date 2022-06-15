@@ -15,10 +15,8 @@ border-top: #E0E0E0 2px solid;
 
 }
 .cartTotal h1{
-    
-    text-align: end;
     font-size: 20px;
-    margin: 5px;
+    margin: 5px 256px 0 0 ;
 
 }
 .cartTotal button{
@@ -32,4 +30,11 @@ border-top: #E0E0E0 2px solid;
     font-weight: 700;
     border: none;
     color: #787878;
+}
+.cartTotal span{
+text-align: justify;
+}
+@media only screen and (max-width: 800px){
+    .cartTotal{
+    }
 }

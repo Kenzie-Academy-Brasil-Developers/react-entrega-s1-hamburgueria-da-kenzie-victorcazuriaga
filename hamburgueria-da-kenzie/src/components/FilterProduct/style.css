@@ -10,7 +10,7 @@
 }
 .filterSearch input{
     width: 340px;
-    height: 20px;
+    height: 40px;
     border-radius: 8px;
     border: none;
     padding: 0px 10px 0px 15px ;
@@ -28,4 +28,15 @@
     height: 40px;
     gap:10px;
     padding: 0 20px;
+}
+@media only screen  and (max-width:800px){
+.filterSearch{ 
+    width: 200px;
+}
+.filterSearch button {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+}
+
 }
